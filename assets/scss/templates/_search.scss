@@ -1,0 +1,86 @@
+// Search
+.search {
+
+  header h1{
+    @include col(1);
+  }
+
+  .sidebar-filters {
+    @include col(1/3);
+    padding-top: $padding/3;
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+      float: none;
+    }
+
+    .filters {
+      padding: $padding 0;
+    }
+
+    .filter-group {
+      padding: 0 0 $padding 0;
+      input[type=search], input[type=text], input[type=date] {
+        width: 100%;
+      }
+    }
+  }
+
+  .search-content {
+    @include col(2/3);
+
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    .promoted {
+      background: $nhs-pale-grey;
+      padding: $padding;
+      margin: 0 0 $margin 0;
+      border-bottom: none;
+
+      p[role="note"] {
+        color: $nhs-dark-grey;
+        font-size: $small-font-size;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .search-box, .search-select {
+      margin: $margin/2 0;
+    }
+
+    .pdf-link, .csv-link, .doc-link, .ppt-link, .rtf-link, .xls-link {
+      padding-left: 20px;
+    }
+
+    .pdf-link {
+      background: url("#{$imagePath}/icon_pdf.gif") no-repeat left center;
+    }
+
+    .csv-link {
+      background: url("#{$imagePath}/icon_csv.gif") no-repeat left center;
+    }
+
+    .doc-link {
+      background: url("#{$imagePath}/icon_doc.gif") no-repeat left center;
+    }
+
+    .ppt-link {
+      background: url("#{$imagePath}/icon_ppt.gif") no-repeat left center;
+    }
+
+    .rtf-link {
+      background: url("#{$imagePath}/icon_rtf.gif") no-repeat left center;
+    }
+
+    .xls-link {
+      background: url("#{$imagePath}/icon_xls.gif") no-repeat left center;
+    }
+  }
+}
+
+.document-search-content {
+  @include col(1);
+}

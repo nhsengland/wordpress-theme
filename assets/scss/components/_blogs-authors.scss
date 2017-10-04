@@ -1,0 +1,21 @@
+.blogs-authors {
+
+  h2 {
+    margin: $margin 0;
+  }
+
+  ul {
+    @include row(true);
+
+    li {
+      @include col(1/7);
+      text-align: center;
+      min-height: 192px;
+      margin: 0 0 $margin;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

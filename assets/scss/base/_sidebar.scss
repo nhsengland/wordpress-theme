@@ -1,0 +1,136 @@
+// General Sidebar Styles
+
+.sidebar, .home-sidebar {
+  @include col(1/4);
+
+  @media screen and (max-width: $small-screen) {
+    @include col(1);
+  }
+
+  h3, h4 {
+    border-bottom: 1px solid $heading-underline;
+  }
+
+  .more-news {
+    padding-left: 20px;
+    font-size: $small-font-size;
+    color: $base-font-colour;
+    background: url("#{$imagePath}/chevron.svg") no-repeat left center;
+    background-size: 9px 12px;
+
+    &:hover {
+      color: $nhs-blue;
+    }
+
+    .lt-ie9 & {
+
+      &:before {
+        background-image: url("#{$imagePath}/chevron.png");
+      }
+    }
+  }
+}
+
+.sidebar-block, .sub-nav {
+  margin: 0 0 $margin 0;
+  font-size: $small-font-size;
+
+  @media screen and (max-width: $small-screen) {
+    margin-top: $margin;
+  }
+
+  li {
+    margin: 0 0 10px 0;
+  }
+
+  .screen-reader-text {
+    display: none;
+  }
+}
+
+.page-template-page-landing .sidebar-block {
+  margin-top: $margin;
+}
+
+.post-date {
+  display: block;
+  color: $dark-grey;
+  position: relative;
+  padding: 0 0 0 $padding/2;
+  font-size: $small-font-size;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    left: 0;
+    top: 5px;
+    background: url("#{$imagePath}/icon-time.svg") no-repeat 0 0;
+    background-size: 12px 12px;
+  }
+
+  .lt-ie9 & {
+
+    &:before {
+      background-image: url("#{$imagePath}/icon-time.png");
+    }
+  }
+}
+
+#feedburner {
+
+  label {
+    display: block;
+  }
+
+  input[type=text] {
+    width: 66.6666%;
+    float: left;
+    font-size: 12px;
+  }
+
+  input[type=submit] {
+    width: 33.3333%;
+    float: right;
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+.twitter-feed {
+
+  li {
+    margin-bottom: 10px;
+    padding: $padding;
+    background: $light-grey;
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    small, small a {
+      color: $nhs-blue;
+    }
+  }
+}
+
+.simple_tweet_widget {
+  h4 {
+    padding: 2px 0 10px 40px;
+    background: url("#{$imagePath}/icon-twitter.png") no-repeat left 3px;
+  }
+}
+
+.widget_recent_entries {
+  h4 {
+    padding: 2px 0 10px 40px;
+    background: url("#{$imagePath}/icon-news.png") no-repeat left 3px;
+  }
+}
+
+aside {
+  h3, h4 {
+    color: $nhs-dark-blue;
+  }
+}

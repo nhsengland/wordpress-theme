@@ -1,0 +1,10 @@
+.page-template-page-home-simple {
+
+  .simple-homepage  {
+    @include col(3/4);
+
+    @media screen and (max-width: $medium-screen) {
+      @include col(1);
+    }
+  }
+}

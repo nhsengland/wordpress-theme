@@ -1,0 +1,33 @@
+.document-component {
+  @include row(true);
+
+  .document-component-thumbnail {
+    @include col(2/8);
+
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    .doc-thumbnail {
+      border: 5px solid $grey-3;
+      float: left;
+      width: 100%;
+
+      img {
+        display: block;
+      }
+
+      &:hover {
+        border: 5px solid $brand-tertiary;
+      }
+    }
+  }
+
+  .document-component-detail {
+    @include col(4/8);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+      margin-bottom: $margin;
+    }
+  }
+}

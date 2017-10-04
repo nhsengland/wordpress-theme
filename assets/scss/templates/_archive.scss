@@ -1,0 +1,70 @@
+// Archive
+
+.archive {
+
+  .archive-posts {
+    @include col(3/4);
+
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    header p {
+      margin: 0 0 $margin 0;
+    }
+  }
+}
+
+// Blog
+
+.blog {
+
+  .blog-posts {
+    @include col(3/4);
+
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+  }
+}
+
+// Category Page
+
+.category-page-content {
+  @include col(3/4);
+
+  .category {
+
+    .category-posts {
+      @include col(1);
+    }
+  }
+}
+
+.archive,
+.blog,
+.category-page-content {
+
+  .archive-posts,
+  .blog-posts,
+  .category .category-posts {
+
+    article {
+      margin-bottom: $margin;
+    }
+
+  }
+}
+
+.widget-news-sidebar {
+  @include col(1/4);
+
+  @media screen and (max-width: $small-screen) {
+    @include col(1);
+  }
+
+  h4 {
+    border-bottom: 1px solid $heading-underline;
+  }
+
+}

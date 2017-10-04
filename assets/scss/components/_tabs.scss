@@ -1,0 +1,28 @@
+// Tabs Module
+
+.tabs {
+  margin: $margin*2 0;
+}
+.tabs ul {
+  margin: 0 0 $margin 0;
+
+  li {
+    display: inline-block;
+
+    &:first-child {
+      border-right: 2px solid $input-border;
+    }
+
+    a {
+      margin: 0 0 0 $margin/2;
+    }
+
+    a.selected {
+      color: $black;
+    }
+
+    &:first-child a {
+      margin: 0 $margin/2 0 0;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.blog-component {
+  @include row(true);
+  padding: 30px 0;
+
+  .post-meta img, .author img {
+    width: 16px;
+    height: auto;
+    float: left;
+    margin: 3px 10px 0 0;
+  }
+
+  > header {
+    padding: 0 $padding;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    position: relative;
+    margin: 0 5px 0 0;
+  }
+
+
+  .blog-component-sticky-post {
+    @include col(1/2);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    .content {
+      padding-top: $padding/2;
+      clear: both;
+    }
+  }
+
+  .blog-component-recent-posts {
+
+    @include col(1/2);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    > ul > li {
+      border-bottom: 1px solid $grey-3;
+      margin-bottom: 15px;
+      display: block;
+      clear: both;
+      padding-bottom: 10px;
+    }
+  }
+
+  .post-meta {
+    float: left;
+    margin: 0 10px 0 0;
+    color: $black;
+  }
+
+  .see-all-links {
+    clear: both;
+    padding: 30px 30px 0 30px;
+  }
+
+}

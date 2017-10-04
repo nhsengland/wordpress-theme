@@ -1,0 +1,196 @@
+.topic-landing header {
+  h2 {
+    margin: #{$margin / 2} 0;
+    display: inline-block;
+  }
+}
+
+.topic-sub-sections {
+  @include col(1);
+  margin-top: $margin;
+
+  .topic {
+    @include col(1/3);
+    margin-bottom: $margin;
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    .topic-summary {
+      padding: 10px 0;
+
+      h3 {
+        margin: 0 0 #{$margin / 2};
+      }
+    }
+  }
+}
+
+.page-template-page-landing-new {
+
+  .topic-atoz {
+    @include col(1);
+  }
+}
+
+.topic-atoz {
+
+  ul {
+    display: block;
+    columns: 3;
+    -moz-columns: 3;
+    column-gap: $margin;
+    margin-bottom: $margin;
+    @media screen and (max-width: $small-screen) {
+      columns: 1;
+      column-gap: 0;
+      margin-bottom: $margin;
+    }
+  }
+
+  li {
+    margin: 0;
+    padding-bottom: 15px;
+    list-style: none;
+    -webkit-column-break-inside: avoid;
+    column-break-inside: avoid;
+    page-break-inside: avoid;
+
+    a {
+      display: inline-flex;
+    }
+  }
+}
+
+.topic-news {
+  @include col(1);
+
+  .news-posts {
+    @include row(true);
+
+
+    .post {
+      @include col(1/4);
+      margin-bottom: $margin;
+      font-size: $small-font-size;
+      min-height: 220px;
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+      }
+
+      h4 {
+        font-size: $small-font-size;
+      }
+    }
+  }
+}
+
+.topic-video {
+
+  .topic-video-frame {
+    @include col(1/2);
+    @media screen and (max-width: $small-screen) {
+      @include col(1, $padding: false);
+    }
+  }
+
+  .video-player {
+    background: $grey-3;
+    border: 5px solid $grey-3;;
+  }
+
+  .topic-video-caption {
+    @include col(1/2);
+    @media screen and (max-width: $small-screen) {
+      @include col(1, $padding: false);
+    }
+  }
+
+}
+
+.topic-viewall {
+  @include col(8/8);
+  padding: $padding;
+}
+
+.topic-publication {
+  @include col(1);
+  margin: $margin 0;
+
+  .topic-publication-thumbnail {
+    @include col(2/8);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    .doc-thumbnail {
+      border: 5px solid $grey-3;
+      float: left;
+      width: 100%;
+
+      &:hover {
+        border: 5px solid $brand-tertiary;
+      }
+    }
+
+  }
+
+  .topic-publication-detail {
+    @include col(4/8);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+      margin-bottom: $margin;
+    }
+  }
+}
+
+
+.topic-blog {
+
+  .post-meta img, .author img {
+    width: 16px;
+    height: auto;
+    float: left;
+    margin: 3px 10px 0 0;
+  }
+
+  > header {
+    padding: 0 $padding;
+  }
+
+  .topic-blog-sticky-post {
+    @include col(1/2);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+  }
+
+  .topic-blog-recent-posts {
+    @include col(1/2);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    li {
+      border-bottom: 1px solid $grey-3;
+      margin-bottom: 15px;
+      display: block;
+      clear: both;
+      padding-bottom: 10px;
+    }
+
+    .author, .post-meta {
+      float: left;
+      margin: 0 10px 0 0;
+      color: $black;
+
+    }
+  }
+
+}
+
+.section-caption-block {
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: $margin;
+}

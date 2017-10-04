@@ -1,0 +1,203 @@
+// Resets / Global form styles
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=phone],
+input[type=password],
+input[type=tel],
+input[type=url],
+input[type=date],
+input[type=datetime],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance :none;
+  appearance: none;
+  border-radius: 0;
+  border: 2px solid $input-border;
+  font-size: $base-font-size;
+  color: $base-font-colour;
+  padding: 5px;
+  margin: 0;
+  outline: 0;
+  transition: all 0.2s ease-in-out;
+  width: 50%;
+  line-height: 1;
+
+  @media screen and (max-width: $small-screen) {
+    width: 100%;
+  }
+
+  &:focus {
+    border: 2px solid $input-border-focus;
+  }
+}
+
+input[type=file] {
+  outline: none;
+  font-size: $base-font-size;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  width: 100%;
+  font-size: $base-font-size;
+  border: 2px solid $input-border;
+  height: 35px;
+  outline: none;
+  color: $base-font-colour;
+  border-radius: 0;
+  background: $white;
+
+  &:focus {
+    border: 2px solid $input-border-focus;
+  }
+}
+
+label[for=search] {
+  @include hide;
+}
+
+fieldset {
+  legend {
+    margin-bottom: $margin/2;
+  }
+}
+
+// Buttons
+input[type=submit],
+input[type=reset],
+input[type=button],
+button, .button, .submit {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+  padding: 8px $padding;
+  background: $button;
+  font-size: $base-font-size;
+  color: $light-grey;
+  transition: all 0.2s ease-in-out;
+  line-height: 1;
+
+  &.nhs-dark-pink {
+    background: $nhs-dark-pink;
+  }
+}
+
+.button {
+  padding: $padding/2 $padding;
+  display: inline-block;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover,
+button:hover, .button:hover {
+  background-color: $button-hover;
+  color: $white;
+  text-decoration: none;
+}
+
+.button.nhs-dark-pink {
+  &:hover, 
+  &:focus,
+  &:active {
+    background: scale-color($nhs-dark-pink, $lightness: -25%);
+    color: $white;
+  }
+}
+
+input[type=submit]:active,
+input[type=reset]:active,
+input[type=button]:active,
+button:active, .button:active,
+input[type=submit]:focus,
+input[type=reset]:focus,
+input[type=button]:focus,
+button:focus, .button:focus {
+  background-color: $button-hover;
+  outline: none;
+}
+
+.button[disabled="disabled"], .button:hover[disabled="disabled"] {
+  background-color: $button;
+  cursor: default;
+  opacity: 0.5;
+}
+
+.form-group,
+.form-buttons {
+  padding: 0 $padding;
+  margin: 0 0 $margin 0;
+}
+
+.form-group label,
+.form-group legend,
+.filter-group label,
+.filter-group legend {
+  display: block;
+  padding: 0 0 7.5px 0;
+}
+
+.form-group em,
+.filter-group em {
+  font-style: italic;
+  display: block;
+  color: scale-color($base-font-colour, $lightness: 50%);
+  font-size: $small-font-size;
+}
+
+.form-group .required,
+.filter-group .required {
+  font-size: $small-font-size;
+}
+
+.form-error {
+  padding: $padding;
+  background: scale-color($error, $lightness: 50%);
+}
+
+.form-error input[type=text] {
+  border-color: $error;
+}
+
+.form-error span {
+  font-weight: bold;
+}
+
+label.radio-group,
+label.checkbox-group {
+  position: relative;
+  padding-left: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.block-labels {
+
+  label.radio-group,
+  label.checkbox-group {
+    float: left;
+    display: block;
+    clear: left;
+  }
+
+}
+
+label.radio-group:hover,
+label.radio-group.selected,
+label.checkbox-group:hover,
+label.checkbox-group.selected {
+}
+
+label.radio-group input[type=radio],
+label.checkbox-group input[type=checkbox] {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+}

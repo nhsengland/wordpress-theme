@@ -1,0 +1,45 @@
+// News
+
+.news-archive {
+  .row {
+    padding: 0 $padding;
+  }
+
+  h2 {
+    font-size: $base-font-size*1.25;
+  }
+
+  .news-intro {
+    border-bottom: 1px solid $nhs-mid-grey;
+    margin-bottom: $margin;
+    padding-bottom: $padding;
+
+    .sticky {
+      @include row(true);
+
+      .sticky--post-thumbnail {
+        @include col(1/3);
+        @media screen and (max-width: $small-screen) {
+          @include col(1);
+        }
+        img {
+          @include post-thumbnail;
+        }
+      }
+      .sticky--post-content {
+        @include col(2/3);
+        @media screen and (max-width: $small-screen) {
+          @include col(1);
+        }
+      }
+    }
+  }
+
+  .all-other-posts {
+    @include row(true);
+    @media screen and (max-width: $small-screen) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

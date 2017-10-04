@@ -1,0 +1,19 @@
+.section-header {
+
+  b {
+    color: $nhs-dark-grey;
+    font-weight: 700;
+  }
+
+  .parallax-window {
+    padding: #{$padding * 3} 0;
+  }
+
+  .section-caption {
+
+    & > div {
+      margin-left: $grid-gutters/2;
+      margin-right: $grid-gutters/2;
+    }
+  }
+}

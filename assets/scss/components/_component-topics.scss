@@ -1,0 +1,26 @@
+.component-topic-sub-sections {
+  @include row(true);
+
+  .topic {
+    @include col(1/3);
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+  }
+
+  .topic-summary {
+    padding: 15px 0 0;
+    flex-direction: column;
+
+    h3 {
+      margin: 0 0 #{$margin / 2};
+      color: $nhs-blue;
+    }
+
+    .content {
+      flex: 1 0 auto;
+    }
+  }
+}

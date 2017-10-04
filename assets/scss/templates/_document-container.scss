@@ -1,0 +1,227 @@
+.document-container-archive {
+
+  header {
+    @include col(1, true);
+  }
+
+  .alert-container {
+    @include col(1, true);
+  }
+
+  .row {
+    @media screen and (max-width: $small-screen) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.document-container {
+
+  .document-meta {
+    margin-bottom: $margin;
+
+    header {
+      @include col(1);
+    }
+
+    h1, h2 {
+      line-height: 1.2;
+    }
+
+    h2 {
+      color: $grey-1;
+      font-weight: 400;
+    }
+
+    .publishing-meta {
+      margin-top: $margin;
+      @include row;
+    }
+
+    dl {
+      @include col(2/5);
+      font-size: $small-screen-font-size;
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+      }
+
+      dt {
+        width: 50%;
+        float: left;
+        clear: left;
+      }
+      dd {
+        width: 50%;
+        float: left;
+      }
+    }
+
+    .excerpt {
+      @include col(3/5);
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+        margin-top: $margin/2;
+      }
+    }
+  }
+
+  .document-thumbnail {
+    @include row;
+    padding-bottom: $padding;
+    @media screen and (max-width: $small-screen) {
+      @include col(1, false);
+    }
+  }
+
+  .document-file {
+    header {
+      @include col(2/5);
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+      }
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .summary {
+      @include col(3/5);
+      float: right;
+      margin-bottom: $margin;
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+        float: none;
+      }
+
+      .doc-thumbnail {
+        width: 20%;
+        border: 5px solid $grey-3;
+        float: left;
+
+        img {
+          display: block;
+        }
+
+        &:hover {
+          border: 5px solid $brand-tertiary;
+        }
+      }
+
+      h3 {
+        background: none;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      .summary-meta {
+        width: 80%;
+        float: right;
+        padding-left: $padding;
+        margin: 0;
+      }
+    }
+  }
+
+  .document-media {
+
+    header {
+      @include col(2/5);
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+      }
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .summary {
+      @include col(3/5);
+      float: right;
+      margin-bottom: $margin;
+
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+        float: none;
+      }
+
+    }
+
+    .media {
+      border: 5px solid $grey-3;
+      background: $grey-4;
+      text-align: center;
+      @media screen and (max-width: $small-screen) {
+        clear: both;
+      }
+
+      iframe {
+        width: 100%!important;
+      }
+
+      p {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .link {
+      .doc-thumbnail {
+        width: 20%;
+        border: 5px solid $grey-3;
+        float: left;
+
+        img {
+          display: block;
+        }
+
+        &:hover {
+          border: 5px solid $brand-tertiary;
+        }
+      }
+
+      header {
+        width: 80%;
+        padding: 0 0 0 $padding;
+        margin-top: 0;
+        float: left;
+
+        h3 {
+          margin-top: 0;
+        }
+      }
+
+      .note {
+        font-size: $small-font-size;
+        color: $nhs-dark-grey;
+        padding: 5px 0;
+        @include conceal;
+
+        &.disclose {
+          @include disclose;
+        }
+      }
+    }
+  }
+
+  .attributes {
+    margin-left: 0;
+  }
+
+  .attributes li {
+    list-style: none;
+    margin: 0 5px 0 0;
+    display: inline;
+  }
+
+  .document-summary {
+    @include col(3/5);
+    float: right;
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+      float: none;
+    }
+  }
+
+}

@@ -1,0 +1,41 @@
+.component-our-priorities {
+  @include row(true);
+
+  .priority {
+    @include col(1/3);
+    margin-bottom: $margin;
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    span {
+      position: relative;
+      display: block;
+      font-size: $base-font-size*1.25;
+      width: 100%;
+      background: $nhs-blue;
+      color: $white;
+      padding: $padding/2 $padding/2 $padding*2;
+      min-height: 120px;
+      @include transition(background);
+      cursor: pointer;
+
+      a {
+        color: $white;
+      }
+
+      .arrow {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        height: 32px;
+        width: 32px;
+      }
+
+      &:hover {
+        background: $nhs-bright-blue;
+      }
+    }
+  }
+
+}

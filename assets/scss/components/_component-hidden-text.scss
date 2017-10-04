@@ -1,0 +1,35 @@
+// Hidden text
+.hidden-text-component {
+  padding: $padding $padding 0;
+  background: $nhs-pale-grey;
+  .anchor, .anchor:active, .anchor:focus {
+    color: $black;
+    text-decoration: none;
+  }
+  .details {
+    margin: 0 0 $margin 0;
+    max-width: $body-line-lenght;
+  }
+
+  .panel {
+    padding: $padding/2 0 0;
+  }
+
+  .details.open {
+    .summary {
+      &:before {
+        content: '\25BC';
+      }
+    }
+  }
+
+  .summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    &:before {
+      content: '\25B6';
+      padding-right: 0.5em;
+    }
+  }
+}

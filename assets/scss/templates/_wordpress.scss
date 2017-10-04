@@ -1,0 +1,109 @@
+// Custom Styles for content areas
+
+.rich-text {
+  // Buttons
+  a.wpc-button {
+    background: $nhs-blue;
+    color: $white;
+    padding: $padding/2 $padding;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0 $margin;
+
+    &:hover {
+      background: scale-color($nhs-blue, $lightness: -25%);
+      color: $white;
+    }
+
+
+
+    &.nhs-dark-pink {
+      background: $nhs-dark-pink;
+
+      &:hover, &:focus {
+        background: scale-color($nhs-dark-pink, $lightness: -25%);
+        color: $white;
+      }
+    }
+  }
+
+  // Alerts and stuff
+  .wpc-message {
+    width: 100%;
+    padding: $padding;
+    background: $light-grey;
+    color: $dark-grey;
+    clear: both;
+    margin: 0 0 $margin;
+
+    strong {
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &.alert {
+      background: $success;
+      color: $white;
+    }
+
+    &.attention {
+      background: $attention;
+      color: $black;
+    }
+
+    &.error {
+      background: $error;
+      color: $white;
+    }
+
+    &.warning {
+      background: $highlight;
+      color: $black;
+    }
+  }
+
+  // Blockquote
+
+  .wpc-blockquote {
+    background: $light-grey;
+    padding: ($padding)*2;
+    position: relative;
+
+    p {
+      margin: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: url("#{$imagePath}/block-quote-before.png") no-repeat 0 0;
+      height: 14px;
+      width: 14px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: url("#{$imagePath}/block-quote-after.png") no-repeat 0 0;
+      height: 14px;
+      width: 14px;
+    }
+  }
+
+  .wpc-publications-block {
+    background: $light-grey;
+    padding: ($padding)*2;
+    margin: 0 0 $margin;
+
+    img {
+      border: 2px solid $white;
+    }
+  }
+}

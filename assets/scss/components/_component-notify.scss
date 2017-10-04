@@ -1,0 +1,70 @@
+// Notify
+.component-notify {
+  position: relative;
+  padding: $padding $padding*2 $padding $padding*3;
+  background: $grey-3;
+
+  a {
+    color: $base-font-colour;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &:before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $grey-1;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -15px;
+    animation: 1.2s infinite pulse;
+  }
+
+  &.error {
+    background: $nhs-emergency-red;
+    color: $white;
+
+    &:before {
+      background: $white;
+    }
+
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  &.warning {
+    background: $nhs-warm-yellow;
+    color: $black;
+
+    &:before {
+      background: $black;
+    }
+
+    a {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+
+  &.good {
+    background: $nhs-dark-green;
+    color: $white;
+
+    &:before {
+      background: $white;
+    }
+
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+}

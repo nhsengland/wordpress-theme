@@ -1,0 +1,31 @@
+{
+  "license": "MIT",
+  "author": {
+    "name": "dxw",
+    "url": "https://www.dxw.com/"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-exorcise": "^2.1.1",
+    "grunt-img": "~0.1.8",
+    "grunt-modernizr": "^1.0.2",
+    "grunt-sass": "^1.2.0",
+    "grunt-standard": "^2.0.0",
+    "grunt-svgmin": "^4.0.0"
+  },
+  "dependencies": {
+    "FitVids": "git+https://github.com/davatron5000/FitVids.js.git#v1.1.0",
+    "accessible-mega-menu": "git+https://github.com/adobe-accessibility/Accessible-Mega-Menu.git",
+    "enquire.js": "git+https://github.com/WickyNilliams/enquire.js.git#v2.1.2",
+    "jquery": "git+https://github.com/jquery/jquery.git#1.12.4",
+    "jquery-ui": "git+https://github.com/components/jqueryui.git#1.9.2",
+    "media-match": "git+https://github.com/weblinc/media-match.git#v2.0.2",
+    "parallax": "git+https://github.com/pixelcog/parallax.js.git#v1.4.2"
+  }
+}

@@ -1,0 +1,133 @@
+// Percentage Function
+// Use like this
+// div {width: pc(500,1280);}
+
+@function pc($wanted, $parent) {
+  @return #{($wanted / $parent) * 100 + '%'};
+}
+
+// Rem/PX
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// Transition
+@mixin transition ($property) {
+  -webkit-transition: $property .2s ease-in-out;
+  -moz-transition: $property .2s ease-in-out;
+  transition: $property .2s ease-in-out;
+}
+
+// Arrows
+@mixin arrow-up ($size, $colour) {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;;
+  border-bottom: $size solid $colour;
+}
+
+@mixin arrow-down ($size, $colour) {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;;
+  border-top: $size solid $colour;
+}
+
+@mixin post-thumbnail {
+  display: block;
+  border: 5px solid $border-colour;
+  width: 100%;
+  height: auto;
+}
+
+// Buttons
+@mixin button($background, $colour, $size) {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border: 0;
+  @if $size == big {
+    padding: $padding/2 $padding;
+    font-size: $base-font-size*1.5;
+    font-weight: 700;
+  } @if $size == small {
+    padding: 4px 8px;
+    font-size: #{$base-font-size - 4};
+    font-weight: 400;
+  } @else {
+    padding: 8px $padding;
+    font-size: $base-font-size;
+    font-weight: 400;
+  }
+  background: $background;
+  color: $colour;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@mixin ghost-button ($border-colour, $colour, $size, $background-hover, $border-hover, $colour-hover) {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border: 0;
+  @if $size == big {
+    padding: $padding/2 $padding;
+    font-size: $base-font-size*1.5;
+    font-weight: 700;
+  } @if $size == small {
+    padding: 4px 8px;
+    font-size: #{$base-font-size - 4};
+    font-weight: 400;
+  } @else {
+    padding: 8px $padding;
+    font-size: $base-font-size;
+    font-weight: 400;
+  }
+  background: transparent;
+  color: $colour;
+  display: inline-block;
+  border: 2px solid $border-colour;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    background: $background-hover;
+    border-colour: $border-hover;
+    color: $colour-hover;
+  }
+}
+
+// Helpers
+@mixin conceal {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin disclose {
+  display: block;
+  visibility: visible;
+}
+
+@mixin hide {
+  position: absolute;
+  left: -9999em;
+}
+
+@mixin show {
+  position: static;
+  left: inherit;
+}
+
+// Animation keyframes
+@keyframes pulse {
+  from { opacity: 1};
+  to { opacity: 0.5};
+}

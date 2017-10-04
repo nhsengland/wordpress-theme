@@ -1,0 +1,176 @@
+// Home page
+
+.homepage-content {
+  @include col(3/4);
+
+  @media screen and (max-width: $small-screen) {
+    @include col(1);
+  }
+}
+
+.home-page-static {
+  @include row(true);
+}
+
+.homepage-featured {
+  margin: 0 $grid-gutters/2 $grid-gutters $grid-gutters/2;
+  background: $light-grey;
+
+  h1 {
+    font-size: $base-font-size*1.25;
+  }
+
+  img {
+    width: 30%;
+    float: left;
+
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+    }
+  }
+
+  article {
+    width: 70%;
+    float: right;
+    padding: 0 $padding;
+
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+      padding: $padding;
+    }
+
+    h1, p {
+      display: inline-block;
+    }
+  }
+
+  a h1 {
+    color: $nhs-dark-blue;
+  }
+
+  a p {
+    color: $black;
+  }
+}
+
+.homepage-news-wrapper {
+  @include col(1/3);
+
+  @media screen and (max-width: $small-screen) {
+    @include col(1);
+  }
+}
+
+.homepage-news-item {
+  margin-bottom: $margin;
+  background: $nhs-blue;
+  color: $white;
+
+  &:hover, &:focus {
+    @include transition(all);
+    background: scale-color($nhs-blue, $lightness: -20%);
+  }
+
+  a {
+    color: $white;
+  }
+
+  h2 {
+    margin-top: 0;
+    @extend h3;
+  }
+
+  p {
+    font-size: $small-font-size;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  article {
+    padding: $padding/2;
+    min-height: 310px;
+
+    @media screen and (max-width: $small-screen) {
+      min-height: auto;
+    }
+  }
+}
+
+.homepage-news-item.last {
+
+  @media screen and (max-width: $small-screen) {
+    margin: 0 0 $margin;
+  }
+}
+
+.homepage-small-promo {
+  @include row(true);
+
+  a {
+    display: block;
+    color: $white;
+    padding: $padding/2;
+    background: $nhs-blue;
+    min-height: 225px;
+
+    &:hover, &:focus {
+      @include transition(all);
+      background: scale-color($nhs-blue, $lightness: -20%);
+    }
+
+    @media screen and (max-width: $small-screen) {
+      min-height: auto;
+    }
+  }
+
+  li {
+    @include col(1/3);
+
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+      margin: 0 0 $margin;
+    }
+
+    p {
+      font-size: $small-font-size;
+    }
+  }
+
+  li + li {
+
+    a {
+      background: $nhs-dark-pink;
+
+      &:hover, &:focus {
+        @include transition(all);
+        background: scale-color($nhs-dark-pink, $lightness: -20%);
+      }
+    }
+  }
+
+  li + li + li {
+
+    a {
+      background: $nhs-dark-blue;
+
+      &:hover, &:focus {
+        @include transition(all);
+        background: scale-color($nhs-dark-blue, $lightness: -20%);
+      }
+    }
+  }
+}
+
+.bxslider img {
+  width: 100%;
+  height: auto;
+
+  .homepage-intro {
+    h1 {
+      font-size: $base-font-size*1.25;
+    }
+  }
+
+}

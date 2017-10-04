@@ -1,0 +1,60 @@
+.hide {
+  position: absolute;
+  left: -9999em;
+}
+
+@media screen and (min-width: $medium-screen) {
+  .hidden-phone {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $small-screen) {
+  .visible-phone {
+    display: block;
+  }
+}
+
+.desktop-only {
+  display: block;
+  visibility: visible;
+
+  @media screen and (max-width: $small-screen) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.mobile-only {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (max-width: $small-screen) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+// Site
+
+html {
+  font-size: 62.5%; // Creates a baseline of 1em/rem = 10px;
+  background: $body-bg;
+}
+
+body {
+  font-family: $base-sans;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-colour;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  @include row;
+}

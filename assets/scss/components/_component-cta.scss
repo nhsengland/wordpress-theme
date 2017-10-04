@@ -1,0 +1,48 @@
+.cta-component {
+  padding-top: $padding;
+  padding-bottom: $padding;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  margin: $margin 0;
+
+  &.cta-light {
+    background-color: $nhs-pale-grey;
+    color: $black;
+
+    .button {
+      @extend .button.nhs-dark-pink;
+    }
+  }
+
+  &.cta-dark {
+    background-color: $nhs-dark-grey;
+    color: $white;
+
+    .button {
+      background-color: $white;
+      color: $link-colour;
+
+      &:hover,
+      &:focus {
+        color: $nhs-dark-pink;
+      }
+    }
+  }
+
+  &.cta-center {
+
+    section {
+      text-align: center;
+    }
+  }
+
+  section {
+
+    .button {
+      display: inline-block;
+      @media screen and (max-width: $small-screen) {
+        display: block;
+      }
+    }
+  }
+}

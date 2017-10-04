@@ -1,0 +1,21 @@
+.page-template-page-components {
+
+  .header {
+    margin: 0;
+  }
+
+  .components .row {
+    max-width: $site-max-width;
+    margin: $margin*2 auto;
+    padding: 0 $padding;
+
+    @media screen and (max-width: $small-screen) {
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+}

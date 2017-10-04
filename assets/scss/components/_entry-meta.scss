@@ -1,0 +1,44 @@
+.entry-meta {
+  padding: 0 0 $padding/4;
+
+  .post-author, .post-meta {
+    float: left;
+    margin: 0 15px 0 0;
+    color: $black;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    position: relative;
+    margin: 0 5px 0 0;
+  }
+
+  .topics {
+    clear: both;
+    padding: 10px 0 0;
+    font-size: $small-font-size;
+
+    li {
+      display: inline-block;
+      margin: 0 5px 7px 0;
+
+      a, .no-link {
+        padding: 3px 7px;
+        background: $offwhite;
+        border-radius: 5px;
+        border: 1px solid $nhs-pale-grey;
+        color: $nhs-dark-grey;
+      }
+
+      a:hover {
+        background: $nhs-blue;
+        border-color: $nhs-bright-blue;
+        color: $white;
+        text-decoration: none;
+        transition: 0.2s all ease-in-out;
+      }
+    }
+  }
+}

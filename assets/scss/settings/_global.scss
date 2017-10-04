@@ -1,0 +1,120 @@
+// Paths
+$imagePath: "img";
+$fontPath: "fonts";
+
+// Fonts
+$system-font-family-sans: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", Sans-Serif;
+$font-family-sans: $system-font-family-sans;
+$font-family-serif: "Georgia", Times, Serif;
+
+/// Fonts
+@import url("https://fast.fonts.net/t/1.css?apiType=css&projectid=df8395a8-1825-40a2-9d42-2a3c3e11b0be");
+@font-face{
+  font-family:"Frutiger LT W01_45 Ligh1475730";
+  src:url("#{$fontPath}/81e3653a-53bd-49d9-a1f8-f924811b6f02.eot?#iefix");
+  src:url("#{$fontPath}/81e3653a-53bd-49d9-a1f8-f924811b6f02.eot?#iefix") format("eot"),url("#{$fontPath}/087d8a95-3f25-4bae-a1d1-db9ddffd72f5.woff2") format("woff2"),url("#{$fontPath}/ab1bcdf7-9570-4cba-a8e3-3e39ddd861db.woff") format("woff"),url("#{$fontPath}/83c94878-06c8-442c-a7df-d520b0ced00b.ttf") format("truetype"),url("#{$fontPath}/29f3ff8a-1719-4e25-a757-53ee1a1114a5.svg#29f3ff8a-1719-4e25-a757-53ee1a1114a5") format("svg");
+}
+@font-face{
+  font-family:"Frutiger LT W01_55 Roma1475738";
+  src:url("#{$fontPath}/fe232554-5489-4874-bb45-bd966c8c5932.eot?#iefix");
+  src:url("#{$fontPath}/fe232554-5489-4874-bb45-bd966c8c5932.eot?#iefix") format("eot"),url("#{$fontPath}/0811514e-6660-4043-92c1-23d0b8caaa2f.woff2") format("woff2"),url("#{$fontPath}/aeae8cac-ba4d-40d2-bbcf-936f2c7dcfe6.woff") format("woff"),url("#{$fontPath}/caedf2e6-fbef-4928-b08e-1f975981ae8d.ttf") format("truetype"),url("#{$fontPath}/7def0e34-f28d-434f-b2ec-472bde847115.svg#7def0e34-f28d-434f-b2ec-472bde847115") format("svg");
+}
+@font-face{
+  font-family:"Frutiger LT W01_65 Bold1475746";
+  src:url("#{$fontPath}/eb06b4c3-c0fd-4cd0-a9d9-a2954f6839a7.eot?#iefix");
+  src:url("#{$fontPath}/eb06b4c3-c0fd-4cd0-a9d9-a2954f6839a7.eot?#iefix") format("eot"),url("#{$fontPath}/8c92eb68-ce37-4962-a9f4-5b47d336bd1c.woff2") format("woff2"),url("#{$fontPath}/9bdfdcac-bbd4-46a9-9280-056c9a4438a2.woff") format("woff"),url("#{$fontPath}/5dae3a6e-9b07-4c2f-aed2-1f5b8951261b.ttf") format("truetype"),url("#{$fontPath}/eae74276-dd78-47e4-9b27-dac81c3411ca.svg#eae74276-dd78-47e4-9b27-dac81c3411ca") format("svg");
+}
+
+$brand-text: "Frutiger LT W01_45 Ligh1475730";
+$brand-text-alt: "Frutiger LT W01_55 Roma1475738";
+$brand-headings: "Frutiger LT W01_65 Bold1475746";
+
+// Typography
+$system-font-family-sans: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", Sans-Serif;
+// Use system-font-family for iOS/ Android devices. Listed are: Apple iOS system font, iOS San Francisco, Apple San Francisco, Android, Windows Phone;
+$font-family-sans: $system-font-family-sans;
+$font-family-sans-headings: $brand-headings, $system-font-family-sans;
+$font-family-serif: "Georgia", Times,Serif;
+$base-sans: $font-family-sans;
+$base-font-size: 18px;
+$base-line-height: 1.4;
+$header-line-height: 1.2;
+
+$small-font-size: 16px;
+$medium-font-size: 24px;
+$large-font-size: 34px;
+
+$small-screen-font-size: $small-font-size;
+$print-font-size: $small-font-size;
+
+$base-sans: $font-family-sans;
+$base-font-size: 18px;
+$base-line-height: 1.4;
+$header-line-height: 1.2;
+
+$tiny-font-size: 14px;
+$small-font-size: 16px;
+$medium-font-size: 24px;
+$large-font-size: 34px;
+
+// NHS Branding
+$brand-primary: $nhs-blue;
+$brand-secondary: $nhs-bright-blue;
+$brand-tertiary: $nhs-dark-pink;
+
+// Errors
+$error: $nhs-emergency-red;
+$success: $nhs-dark-green;
+$highlight: $nhs-warm-yellow;
+$attention: $nhs-aqua-blue;
+$cookie: $nhs-pale-grey;
+
+// Social media
+$twitter: #1da1f2;
+$linkedin: #0077b5;
+$youtube: #cd201f;
+$flickr: #ff0084;
+$rss: #f26522;
+
+// Base Site
+$base-font-colour: $black;
+$body-bg: $white;
+$light-grey: $nhs-pale-grey;
+$medium-grey: $nhs-mid-grey;
+$dark-grey: $nhs-dark-grey;
+$link-colour: $brand-primary;
+$link-hover-colour: $brand-tertiary;
+
+// Buttons
+$button: $brand-primary;
+$button-inactive: scale-color($brand-primary, $lightness: 50%);
+$button-hover: $brand-tertiary;
+$button-text: $white;
+$button-text-hover: $white;
+
+// Tables
+$table-borders: $grey-2;
+
+// Borders
+$border-colour: $nhs-pale-grey;
+$border-radius: 0px;
+$input-border: $nhs-mid-grey;
+$input-border-focus: $highlight;
+$seperator-border-colour: $nhs-pale-grey;
+
+// Margins
+$margin: 30px;
+
+// Padding
+$padding: 30px;
+
+// Site Width
+$site-max-width: 1200px;
+$site-padding: 15px;
+
+// Breakpoints
+$big-screen: $site-max-width;
+$medium-screen: 900px;
+$small-screen: 780px;
+$smaller-screen: 480px;
+$tiny-screen: 340px;

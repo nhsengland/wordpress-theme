@@ -1,0 +1,293 @@
+// Landing Page
+.blog-landing {
+
+  .row {
+    padding: 0 $padding;
+
+  }
+
+  .row header {
+    @include col(1, false);
+    margin: $margin 0;
+  }
+
+  .sticky {
+
+    @include col(1,false);
+    padding: $padding 0;
+
+    background: $nhs-pale-grey;
+    border-radius: 5px;
+    border: 1px solid $nhs-pale-grey;
+
+    header {
+      margin: 0;
+    }
+
+    .sticky--post-thumbnail {
+      @include col(1/3);
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .sticky--post-content {
+      @include col(2/3);
+    }
+
+    .topics a {
+      background-color: $white;
+    }
+
+    margin: 0 0 $margin 0;
+
+  }
+
+  // Recent posts
+  .blog-recent-posts {
+    @include row(true);
+
+    .post {
+      @include col(1/2);
+      margin-bottom: $margin;
+      border-bottom: 1px solid transparent;
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+      }
+
+      &.sticky {
+        @include col(1);
+        border-bottom: 1px solid $nhs-pale-grey;
+      }
+
+      h3 {
+        font-size: $base-font-size*1.25;
+      }
+    }
+
+    .button-container {
+      @include col(1);
+      margin-bottom: $margin;
+    }
+  }
+
+  // Categories
+  .blog-categories {
+    ul {
+      @include row(true);
+    }
+
+    a > li {
+      color: $white;
+    }
+
+    li {
+      @include col(1/3);
+      margin-bottom: $margin*2;
+      position: relative;
+      @media screen and (max-width: $small-screen) {
+        @include col(1);
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+
+      a {
+        color: $white;
+      }
+
+      span {
+        position: relative;
+        display: block;
+        font-size: $base-font-size*1.25;
+        width: 100%;
+        background: $nhs-blue;
+        padding: $padding/4 $padding/4 $padding;
+        min-height: 120px;
+        -webkit-transition: background 0.2s ease-in-out;
+        -moz-transition: background 0.2s ease-in-out;
+        transition: background 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background: $nhs-bright-blue;
+        }
+      }
+
+      .arrow {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+
+  // Authors
+  .blog-authors {
+    padding-bottom: $padding;
+    border-bottom: 1px solid $nhs-pale-grey;
+    margin-bottom: $margin;
+
+    h2 {
+      margin: $margin 0;
+    }
+
+    .author-bio {
+      @include row(true);
+
+      li {
+        @include col(1/5);
+        text-align: center;
+        min-height: 192px;
+        padding-bottom: $padding;
+
+        @media screen and (max-width: $small-screen) {
+          @include col(1/3);
+        }
+        @media screen and (max-width: $smaller-screen) {
+          @include col(1/2);
+        }
+        @media screen and (max-width: $tiny-screen) {
+          @include col(1);
+        }
+
+        img {
+          max-width: 50%;
+          margin: auto;
+          border-radius: 50%;
+        }
+
+        h4 {
+          font-size: $base-font-size*1.25;
+          margin: $margin/2 0 0;
+        }
+
+        .post-count {
+          color: $nhs-dark-grey;
+        }
+      }
+    }
+  }
+
+}
+
+.button-container {
+  display: inline-block;
+  width: 100%;
+}
+
+//  Blog archive
+.blog-archive {
+
+  .row {
+    padding: 0 $padding;
+  }
+
+  .blog-posts-archive {
+    @include row(true);
+    @media screen and (max-width: $small-screen) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+}
+
+
+// Author archive
+.blog-author-archive {
+  padding: 0 $padding;
+
+  header {
+    border-bottom: 1px solid $nhs-pale-grey;
+  }
+
+  .author-meta {
+    @include row(true);
+    padding: 0 0 $padding 0;
+
+    .avatar-photo {
+      @include col(1/5);
+
+      img {
+        height: auto!important;
+      }
+
+      @media screen and (max-width: $medium-screen) {
+        @include col(1/3);
+      }
+      @media screen and (max-width: $small-screen) {
+        @include col(1/2)
+      }
+      @media screen and (max-width: $smaller-screen) {
+        display: none; // no image because it's not really needed at this size
+      }
+    }
+
+    .biography {
+      @include col(4/5);
+      @media screen and (max-width: $medium-screen) {
+        @include col(2/3);
+      }
+      @media screen and (max-width: $small-screen) {
+        @include col(1/2)
+      }
+      @media screen and (max-width: $smaller-screen) {
+        @include col(1);
+      }
+    }
+  }
+
+  &.all-authors {
+
+    header {
+      border-bottom:0;
+    }
+
+    .author-meta {
+      border-bottom: 1px solid $nhs-pale-grey;
+      margin-bottom: $margin;
+    }
+
+    .introduction {
+      margin-bottom: $margin;
+    }
+
+  }
+
+  .author-posts {
+    @include row(true);
+    padding: $padding 0 0;
+
+    .post {
+      @include col(1/2);
+      margin-bottom: $margin;
+      @media screen and (max-width: $smaller-screen) {
+        @include col(1);
+      }
+    }
+
+    h2 {
+      font-size: $base-font-size*1.25;
+      margin: 0 0 15px 0;
+    }
+
+  }
+}
+
+//Blog single
+.single-blog {
+  .single-post {
+    .author-meta {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-top:0;
+    }
+    .entry-meta--topics {
+      border-top: 1px solid $border-colour;
+    }
+  }
+}

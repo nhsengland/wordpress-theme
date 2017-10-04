@@ -1,0 +1,27 @@
+// 404
+.error404 {
+
+  .error-content {
+    @include col(3/4);
+
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    .error-search {
+      width: 100%;
+      margin: $margin 0;
+    }
+
+    .search-form {
+
+      .search-input {
+        width: auto;
+
+        @media screen and (max-width: $tiny-screen) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

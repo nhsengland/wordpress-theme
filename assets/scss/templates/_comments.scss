@@ -1,0 +1,58 @@
+// Comments
+
+.comment-area {
+
+  .comment {
+    margin: $margin 0 $margin 0;
+    padding: 0 0 0 $padding;
+    border-left: 4px solid $nhs-dark-grey;
+
+    .avatar {
+      border-radius: 16px;
+    }
+
+    p {
+      clear: both;
+      margin: $margin 0;
+    }
+  }
+}
+
+.comment-form {
+
+  p {
+    margin: 0 0 $margin 0;
+  }
+
+  textarea {
+    width: 75%;
+  }
+
+  label {
+    display: block;
+    padding: 0 0 7.5px 0;
+  }
+
+  .form-allowed-tags {
+    font-size: $tiny-font-size;
+  }
+
+  code {
+    display: block;
+  }
+}
+
+.comment-count {
+  padding: $padding/2;
+  background: scale-color($highlight, $lightness: 50%);
+  width: 75%;
+
+  &.error {
+    background: scale-color($error, $lightness: 50%);
+  }
+}
+
+.moderation-notification {
+  padding: $padding;
+  background: scale-color($highlight, $lightness: 50%);
+}

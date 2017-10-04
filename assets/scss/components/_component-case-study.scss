@@ -1,0 +1,31 @@
+.case-study-component {
+  @include row(true);
+
+  .case-study-sticky-post {
+    @include col(1/2);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+  }
+
+  .case-study-recent-posts {
+    @include col(1/2);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
+    }
+
+    li {
+      border-bottom: 1px solid $grey-3;
+      margin-bottom: 15px;
+      display: block;
+      clear: both;
+      padding-bottom: 10px;
+
+      .rich-text {
+        color: $black;
+      }
+    }
+
+  }
+
+}

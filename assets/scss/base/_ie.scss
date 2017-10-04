@@ -1,0 +1,30 @@
+.lt-ie9 {
+
+  .cookie-message.hide {
+    display: none;
+    visibility: hidden;
+  }
+
+  header.header {
+    margin-bottom: $margin;
+  }
+
+  .footer {
+
+    .footer-links,
+    .footer-logo {
+      padding-left: $site-padding;
+      padding-right: $site-padding;
+    }
+
+    .footer-links {
+      float: left;
+      width: 75%;
+    }
+
+    .footer-logo {
+      float: right;
+      width: 25%;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.pager {
+  width: 100%;
+  display: inline-block;
+  clear: both;
+  padding: $padding/2 0;
+
+  ul.pagination {
+    text-align: center;
+
+    @media screen and (max-width: $small-screen) {
+      text-align: left;
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  a, span {
+    display: block;
+    float: left;
+    margin: 2px 2px 2px 0;
+    padding: 10px 13px;
+    font-size: $small-font-size;
+    line-height: 14px;
+    text-decoration: none;
+    width: auto;
+  }
+
+  a {
+    cursor: pointer;
+
+    &.previous-page,
+    &.next-page {
+      position: relative;
+    }
+
+    &.previous-page:before,
+    &.next-page:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url("#{$imagePath}/pagination.svg");
+      background-repeat: no-repeat;
+      background-size: 144px 144px;
+
+      .lt-ie9 & {
+        background-image: url("#{$imagePath}/pagination.png");
+      }
+    }
+
+    &.previous-page {
+      padding-left: 15px;
+
+      &:before {
+        background-position: -32px -29px;
+        left: 0;
+
+        .lt-ie9 & {
+          background-position: -12px -11px;
+        }
+      }
+
+      &:hover,
+      &:focus {
+
+        &:before {
+          background-position: -32px -101px;
+
+          .lt-ie9 & {
+            background-position: -12px -51px;
+          }
+        }
+      }
+    }
+
+    &.next-page {
+      padding-right: 15px;
+
+      &:after {
+        background-position: -92px -29px;
+        right: 0;
+
+        .lt-ie9 & {
+          background-position: -45px -11px;
+        }
+      }
+
+      &:hover,
+      &:focus {
+
+        &:after {
+          background-position: -92px -101px;
+
+          .lt-ie9 & {
+            background-position: -45px -51px;
+          }
+        }
+      }
+    }
+  }
+
+  .current,
+  li.active.current a {
+    background: $nhs-mid-grey;
+    cursor: default;
+    color: $white;
+  }
+
+  .arrow.unavailable{
+    display: none;
+    visibility: hidden;
+  }
+
+  span.ellipsis {
+    color: $base-font-colour;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

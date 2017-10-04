@@ -1,0 +1,41 @@
+ul.eventsforce {
+  margin: $margin 0 0 0;    
+
+  li {
+    list-style: none;
+    margin: 0 0 $margin;
+    padding: $padding;
+    background: $light-grey;
+    border-left: 3px solid darken($light-grey, 6%);
+
+    &:hover {
+      background: darken($light-grey, 3%);
+      border-color: darken($light-grey, 9%);
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .event-time {
+    margin-bottom: 2px;
+    color: darken($dark-grey, 5%);
+    font-size:16px;
+  }
+
+}
+
+.eventsforce:before,
+.eventsforce:after,
+.eventsforce li:before,
+.eventsforce li:after {
+  content: " ";
+  display: table;
+}
+
+.eventsforce:after,
+.eventsforce li:after {
+  clear: both;
+}

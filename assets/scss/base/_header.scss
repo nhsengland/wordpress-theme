@@ -1,0 +1,152 @@
+$heading-font: $font-family-sans;
+
+// Pointless cookie message
+.cookie-message {
+  background: $cookie;
+  padding: 15px;
+  font-size: $tiny-font-size;
+  text-align: center;
+
+  .row {
+    padding: 0 $padding;
+  }
+
+  .cookie-accept {
+    margin-left: $margin/2;
+    background: $link-colour;
+    text-decoration: none;
+    color: $white;
+    padding: 2px 8px;
+    font-size: 14px;
+
+    @media screen and (max-width: 768px) {
+      clear: both;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    &:hover, &:focus {
+      background: $link-hover-colour;
+    }
+  }
+}
+
+// Skip to main content link
+.skip-link {
+  a {
+    position: absolute;
+    top: -10000em;
+    width: 100%;
+    display: block;
+    padding: 15px 30px;
+    background: $white;
+
+    &:focus {
+      position: static;
+      outline: none;
+      border: 2px solid $nhs-yellow;
+      top: 0;
+      z-index: 1;
+      color: $nhs-blue;
+    }
+  }
+}
+
+// Header
+.page-template-page-landing-new,
+.page-template-page-components,
+.page-template-page-blog-landing {
+
+  .header {
+    margin-bottom: 0;
+  }
+}
+
+.header {
+  padding: $padding/2 0 0;
+  background: $nhs-blue;
+  margin-bottom: $margin;
+
+  .row {
+    position: relative;
+  }
+
+  .logo {
+    float: left;
+    @include col(1/2);
+
+    a {
+      display: block;
+    }
+
+    @media screen and (max-width: $smaller-screen) and (min-width: $tiny-screen) {
+      width: 40%;
+    }
+
+    img {
+      height: 90px;
+      width: auto;
+
+      @media screen and (max-width: $small-screen) {
+        height: 70px;
+      }
+
+      @media screen and (max-width: $smaller-screen) {
+        height: 60px;
+      }
+    }
+  }
+}
+
+.header-search {
+  @include col(1/2);
+  float: right;
+  padding-top: 28px;
+  text-align: right;
+
+  @media screen and (max-width: $small-screen) {
+    padding-top: $padding/2;
+    @include col(1);
+  }
+
+  .search-form {
+
+    @media screen and (max-width: $small-screen) {
+      display: flex;
+    }
+
+    .search-input {
+      border-color: $white;
+      height: 38px;
+
+      &:focus {
+        border-color: $highlight;
+      }
+
+      @media screen and (max-width: $small-screen) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: $smaller-screen) {
+        width: 60%;
+      }
+
+    }
+
+    .button {
+      @include ghost-button($white, $white, default, $brand-secondary, $white, $white);
+
+      @media screen and (max-width: $small-screen) {
+        margin-top: 0;
+        margin-left: 5px;
+        padding: 8px 20px;
+      }
+
+      @media screen and (max-width: $smaller-screen) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+    }
+  }
+}
